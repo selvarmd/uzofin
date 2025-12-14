@@ -26,7 +26,9 @@
       width: 100%;
       top: 0;
       left: 0;
-      @include gradient-bg(linear-gradient(360deg, $blue-cyan 0%, $violet-midnight 207.64%));
+      @include gradient-bg(
+        linear-gradient(360deg, $blue-cyan 0%, $violet-midnight 207.64%)
+      );
     }
   }
 
@@ -86,7 +88,9 @@
         line-height: 140%;
         letter-spacing: 2%;
         text-transform: uppercase;
-        @include gradient-text(linear-gradient(0deg, $blue-cyan 0%, $violet-midnight 100%));
+        @include gradient-text(
+          linear-gradient(0deg, $blue-cyan 0%, $violet-midnight 100%)
+        );
         margin-bottom: 1rem;
       }
 
@@ -123,6 +127,7 @@
 
     .social-item {
       @include flex-center;
+      justify-content: flex-start;
 
       .social-link {
         @include flex-center;

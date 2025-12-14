@@ -1,0 +1,97 @@
+// mixins.scss
+@use "./variables" as *;
+
+// Center Flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Gradient Mixins
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-bg($gradient) {
+  background: $gradient;
+}
+
+// Predefined Gradients
+$gradient-hero: linear-gradient(90deg, $blue-neon 0%, $pink-violet 100%);
+$gradient-features: linear-gradient(90deg, $blue-neon 0%, $pink-violet 100%);
+$gradient-features-highlight: linear-gradient(
+  90deg,
+  $violet-electric,
+  $indigo-blue
+);
+$gradient-demo: linear-gradient(
+  78.75deg,
+  $blue-indigo 0%,
+  $blue-lavender 31.28%,
+  $pink-electric 77.97%,
+  $yellow-soft 110%
+);
+$gradient-support: linear-gradient(
+  78.75deg,
+  $blue-indigo 0%,
+  $blue-lavender 59.62%,
+  $pink-electric 77.97%
+);
+$gradient-support-top-bg: linear-gradient(
+  180deg,
+  $black-soft 0%,
+  $black-opacity-0 100%
+);
+$gradient-support-bottom-bg: linear-gradient(
+  180deg,
+  $black-opacity-0 0%,
+  $black-soft 100%
+);
+$gradient-stats-transaction: linear-gradient(
+  261.81deg,
+  $green-mint -8.01%,
+  $violet-electric 100%
+);
+$gradient-stats-platform: linear-gradient(
+  260.33deg,
+  $blue-deep -13.37%,
+  $blue-aqua 109.53%
+);
+$gradient-stats-onboarding: linear-gradient(
+  265.11deg,
+  $green-mint -5.84%,
+  $blue-ocean 111.58%
+);
+$gradient-btn-primary: linear-gradient(
+  98.88deg,
+  $violet-electric -2.99%,
+  $black 102.28%
+);
+$gradient-btn-primary-hover: linear-gradient(
+  92.18deg,
+  $violet-electric -0.81%,
+  $black 187.84%
+);
+$gradient-btn-primary-border: linear-gradient(
+  90deg,
+  $violet-deep 0%,
+  $violet-electric 100%
+);
+$gradient-btn-primary-border-hover: linear-gradient(
+  90deg,
+  $violet-electric 0%,
+  $violet-deep 100%
+);
+$gradient-btn-secondary: linear-gradient(
+  90deg,
+  $violet-soft 0%,
+  $violet-darker 100%
+);
+$gradient-btn-secondary-hover: linear-gradient(
+  90deg,
+  $violet-darker 0%,
+  $violet-soft 100%
+);

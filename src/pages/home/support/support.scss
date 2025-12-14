@@ -1,0 +1,66 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as *;
+
+.support-section {
+  padding: 5rem 0;
+  background: url(../../../assets/backgrounds/supports-bg.svg) no-repeat center
+    center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 10%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:before {
+    top: 0;
+    background: $gradient-support-top-bg;
+  }
+
+  &:after {
+    bottom: 0;
+    background: $gradient-support-bottom-bg;
+  }
+
+  @media (min-width: 992px) {
+    padding: 10.938rem 0;
+  }
+
+  .title-block {
+    .tag {
+      font-size: 1.125rem;
+      color: $blue-cyan;
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      line-height: 90%;
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+        line-height: 6rem;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 6rem;
+        line-height: 7.5rem;
+      }
+
+      span {
+        @include gradient-text($gradient-support);
+      }
+    }
+  }
+}

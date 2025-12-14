@@ -1,0 +1,62 @@
+// variables.scss
+
+// COLORS
+$white: #ffffff;
+$dark-black: #0f0f0f;
+$black: #000000;
+
+$violet-electric: #8c01fa;
+$violet-soft: #ba9cff;
+$violet-deep: #440178;
+$violet-darker: #300056;
+$violet-midnight: #39105e;
+
+$black-soft: #030303;
+$black-elevated: #1c1c1c;
+$black-opacity-0: rgba(0, 0, 0, 0);
+
+$blue-royal: #006bf1;
+$blue-sky: #00a9db;
+$blue-cyan: #37ccf7;
+$blue-indigo: #714dff;
+$blue-lavender: #9c83ff;
+$blue-neon: #00fff3;
+$blue-ultra: #3b3bff;
+$blue-light: #41a9ff;
+$blue-deep: #0047ff;
+$blue-aqua: #00bcd4;
+$blue-ocean: #025b8c;
+$blue-glow: #1fcff1;
+
+$grey-light: #c4c4c4;
+$grey-muted: #b9b9b9;
+
+$pink-electric: #e151ff;
+$pink-violet: #ab5eff;
+$indigo-blue: #5250ff;
+$purple-accent: #9945ff;
+
+$yellow-soft: #fff759;
+$yellow-golden: #ffd512;
+
+$green-neon: #19fb9b;
+$green-mint: #00ffbd;
+
+// TYPOGRAPHY
+$font-family: "Poppins", sans-serif;
+
+// BREAKPOINTS (mobile-first)
+$bp-xs: 576px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+$bp-xl: 1400px;
+$bp-xxl: 1600px;
+
+// Container
+$container-xs: 540px;
+$container-sm: 720px;
+$container-md: 960px;
+$container-lg: 1140px;
+$container-xl: 1320px;
+$container-xxl: 1470px;

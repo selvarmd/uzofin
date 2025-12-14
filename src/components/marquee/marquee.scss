@@ -1,0 +1,36 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.marquee-row {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 1.75rem;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 1.875rem;
+    width: fit-content;
+  }
+}
+
+.marquee-item {
+  padding: 1.625rem;
+  background: $black-soft;
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.625rem;
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+
+    &.desc {
+      @include gradient-text(linear-gradient(90deg, $blue-royal 0%, $blue-sky 100%));
+    }
+  }
+}

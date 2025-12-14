@@ -1,0 +1,32 @@
+@use "../../styles/abstracts/mixins" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (min-width: $bp-xs) {
+    max-width: $container-xs;
+  }
+
+  @media (min-width: $bp-sm) {
+    max-width: $container-sm;
+  }
+
+  @media (min-width: $bp-md) {
+    max-width: $container-md;
+  }
+
+  @media (min-width: $bp-lg) {
+    max-width: $container-lg;
+  }
+
+  @media (min-width: $bp-xl) {
+    max-width: $container-xl;
+  }
+
+  @media (min-width: $bp-xxl) {
+    max-width: $container-xxl;
+  }
+}

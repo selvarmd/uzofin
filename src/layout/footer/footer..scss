@@ -1,0 +1,159 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.footer-container {
+  color: $white;
+  padding-top: 3.75rem;
+  padding-bottom: 1.875rem;
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+    padding: 1rem 0;
+
+    @media (min-width: 992px) {
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 3rem 0;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      @include gradient-bg(linear-gradient(360deg, $blue-cyan 0%, $violet-midnight 207.64%));
+    }
+  }
+
+  .footer-brand {
+    @media (min-width: 768px) {
+      max-width: 20.625rem;
+    }
+
+    .footer-logo {
+      max-width: 9.375rem;
+      display: block;
+
+      @media (min-width: 992px) {
+        max-width: initial;
+      }
+    }
+
+    .footer-description {
+      font-size: 1rem;
+      line-height: 140%;
+      color: $grey-light;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+  }
+
+  .footer-column-wrapper {
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 992px) {
+      gap: 1rem;
+    }
+
+    @media (min-width: 1200px) {
+      justify-content: flex-end;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1400px) {
+      gap: 6rem;
+    }
+
+    .footer-column {
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      .footer-heading {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 140%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        @include gradient-text(linear-gradient(0deg, $blue-cyan 0%, $violet-midnight 100%));
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        @media (min-width: 1400px) {
+          min-width: 9.375rem;
+        }
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            font-size: 1rem;
+            line-height: 140%;
+            color: $grey-light;
+            opacity: 0.6;
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+
+            &:hover {
+              opacity: 1;
+              transform: scale(1.02);
+            }
+          }
+        }
+
+        &.footer-list {
+          min-width: initial;
+          max-width: 9.375rem;
+        }
+      }
+    }
+
+    .social-item {
+      @include flex-center;
+
+      .social-link {
+        @include flex-center;
+        gap: 4px;
+        opacity: 1;
+        transform: scale(1);
+
+        span {
+          opacity: 0.6;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding-top: 1.25rem;
+    color: $grey-light;
+    opacity: 0.5;
+    border-top: 1px solid rgba(196, 196, 196, 0.25);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

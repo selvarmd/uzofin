@@ -1,0 +1,312 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as *;
+
+.stats-section {
+  padding: 3.125rem 0;
+  background: url(../../../assets/backgrounds/stats-bg.svg) no-repeat scroll top
+    center;
+
+  @media (min-width: 768px) {
+    padding: 5rem 0;
+  }
+
+  @media (min-width: 992px) {
+    padding: 11.875rem 0 6.25rem;
+  }
+
+  .stats-img-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    @media (min-width: 992px) {
+      gap: 5rem;
+    }
+
+    @media (min-width: 1600px) {
+      gap: 9.375rem;
+    }
+
+    .stats-left {
+      .img-title {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        letter-spacing: 1px;
+        max-width: 35rem;
+        margin-left: auto;
+        margin-bottom: 2.5rem;
+
+        @media (min-width: 768px) {
+          font-size: 1.875rem;
+          line-height: 2.5rem;
+          margin-bottom: 4.063rem;
+        }
+
+        @media (min-width: 992px) {
+          font-size: 2.375rem;
+          line-height: 2.875rem;
+          margin-bottom: 4.063rem;
+        }
+      }
+
+      .spiral-img {
+        margin-right: 2rem;
+
+        img {
+          animation: rotateSmooth 20s ease-in-out infinite;
+          transform-origin: center;
+        }
+      }
+    }
+
+    .stats-right {
+      .stat-item {
+        margin-bottom: 1.5rem;
+
+        @media (min-width: 576px) {
+          margin-bottom: 3rem;
+        }
+
+        .stat-title {
+          font-size: 3.438rem;
+          line-height: 1;
+          margin-bottom: 2px;
+
+          @media (min-width: 992px) {
+            font-size: 5rem;
+            line-height: 5.625rem;
+          }
+
+          @media (min-width: 1200px) {
+            font-size: 6.25rem;
+            line-height: 8.25rem;
+          }
+
+          span {
+            font-size: 2.188rem;
+
+            @media (min-width: 992px) {
+              font-size: 2.813rem;
+            }
+
+            @media (min-width: 1200px) {
+              font-size: 4.375rem;
+            }
+          }
+
+          &.transaction {
+            @include gradient-text($gradient-stats-transaction);
+          }
+
+          &.platform {
+            @include gradient-text($gradient-stats-platform);
+          }
+
+          &.onboarding {
+            @include gradient-text($gradient-stats-onboarding);
+          }
+        }
+
+        .stat-label {
+          font-size: 0.875rem;
+          line-height: 1.688rem;
+          text-transform: uppercase;
+
+          @media (min-width: 768px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .financial-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.125rem;
+    gap: 2.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 4.875rem;
+    }
+
+    @media (min-width: 992px) {
+      gap: 8.75rem;
+    }
+
+    @media (min-width: 1200px) {
+      gap: 3rem;
+    }
+
+    @media (min-width: 1600px) {
+      gap: 8.75rem;
+    }
+
+    .financial-left {
+      .financial-title {
+        font-size: 1.875rem;
+        line-height: 2.125rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.625rem;
+        max-width: 20rem;
+
+        @media (min-width: 768px) {
+          margin-top: 12.5rem;
+        }
+
+        @media (min-width: 992px) {
+          font-size: 2.5rem;
+          line-height: 2.875rem;
+        }
+      }
+
+      .financial-desc {
+        font-size: 1rem;
+        line-height: 1.625rem;
+        text-transform: capitalize;
+        color: $grey-light;
+        display: flex;
+        gap: 4px;
+        max-width: 21.875rem;
+      }
+    }
+
+    .financial-right {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      @media (min-width: 992px) {
+        gap: 2.5rem;
+      }
+
+      .fin-left {
+        @media (min-width: 768px) {
+          margin-top: 4.875rem;
+        }
+      }
+
+      .fin-right {
+        .fin-item {
+          .fin-desc {
+            margin-bottom: 3.125rem;
+          }
+        }
+      }
+
+      .fin-item {
+        padding: 1rem;
+        max-width: 24.688rem;
+        margin-bottom: 2.5rem;
+
+        @media (min-width: 768px) {
+          max-width: 16rem;
+        }
+
+        @media (min-width: 992px) {
+          padding: 2rem;
+        }
+
+        @media (min-width: 1200px) {
+          max-width: 24.688rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .fin-title {
+          font-size: 1.75rem;
+          line-height: 2.125rem;
+          margin-bottom: 0.938rem;
+          border-left: 2px solid;
+          padding-left: 1.125rem;
+
+          &.ai-banking {
+            border-color: $blue-glow;
+          }
+
+          &.payouts {
+            border-color: $purple-accent;
+          }
+
+          &.payments {
+            border-color: $yellow-golden;
+          }
+
+          &.merchant-onboarding {
+            border-color: $green-mint;
+          }
+        }
+
+        .fin-desc {
+          font-size: 1.063rem;
+          line-height: 1.688rem;
+          color: $grey-light;
+          margin-bottom: 1.375rem;
+        }
+
+        .value {
+          font-size: 1.75rem;
+          line-height: 1.75rem;
+          margin-bottom: 0.625rem;
+          display: flex;
+          gap: 6px;
+        }
+
+        .fin-label {
+          font-size: 1rem;
+          line-height: 1.688rem;
+          text-transform: uppercase;
+          color: $grey-light;
+        }
+      }
+    }
+
+    .indicator-dot {
+      height: 4px;
+      width: 4px;
+      min-width: 4px;
+      border-radius: 50%;
+      background: $blue-glow;
+      margin-top: 8px;
+    }
+  }
+}
+
+@keyframes rotateSmooth {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  35% {
+    transform: rotate(87deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  55% {
+    transform: rotate(177deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  95% {
+    transform: rotate(357deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

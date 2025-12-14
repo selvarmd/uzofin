@@ -1,0 +1,54 @@
+@use "../../../styles/abstracts/variables" as *;
+@use "../../../styles/abstracts/mixins" as *;
+
+.build-section {
+  padding: 3.125rem 0 6.25rem;
+  text-align: center;
+  background: url(../../../assets/backgrounds/start-building-bg.svg) no-repeat
+    scroll center center;
+  background-size: 100%;
+
+  @media (min-width: 768px) {
+    padding: 7.5rem 0 15rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    letter-spacing: -0.8px;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 4rem;
+      line-height: 4.75rem;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 5rem;
+      line-height: 5.75rem;
+    }
+
+    span {
+      @include gradient-text($gradient-support);
+    }
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #c4c4c4;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 2rem;
+
+    button {
+      margin: auto;
+    }
+  }
+}

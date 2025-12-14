@@ -1,8 +1,8 @@
 import Header from "../../layout/header/header";
 import Hero from "./hero/hero";
 import Stats from "./stats/stats";
-import Features from "./features/features";
 import BuildSection from "./build-section/build-section";
+import Features from "./features/features";
 import Support from "./support/support";
 import Demo from "./demo/demo";
 import Footer from "../../layout/footer/footer";
@@ -14,8 +14,8 @@ const Home: React.FC = () => {
       <main>
         <Hero />
         <Stats />
-        <Features />
         <BuildSection />
+        <Features />
         <Support />
         <Demo />
       </main>

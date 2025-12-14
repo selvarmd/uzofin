@@ -3,17 +3,25 @@ import Container from "../container/container";
 
 import "./footer..scss";
 
+// Import social media and brand icons
 import Logo from "../../assets/icons/logo-large.svg";
 import LinkedIn from "../../assets/icons/linked-in.svg";
 import XIcon from "../../assets/icons/x.svg";
 import InstaIcon from "../../assets/icons/insta.svg";
 import FbIcon from "../../assets/icons/fb.svg";
 
+/**
+ * Footer component that displays site-wide footer information
+ * Includes brand information, navigation links, and social media links
+ * Organized in a multi-column layout with brand section and link categories
+ * @returns Complete footer section with branding, links, and copyright
+ */
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <Container className="footer-container">
         <div className="footer-top">
+          {/* Brand section with logo and description */}
           <div className="footer-brand">
             <a href="/" className="footer-logo">
               <img alt="" src={Logo} />
@@ -23,7 +31,10 @@ const Footer: React.FC = () => {
               growth opportunities to reach greater heights.
             </p>
           </div>
+          
+          {/* Footer navigation columns */}
           <div className="footer-column-wrapper">
+            {/* Products column */}
             <div className="footer-column">
               <h4 className="footer-heading">PRODUCTS</h4>
               <ul>
@@ -44,6 +55,8 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+            
+            {/* Company information column */}
             <div className="footer-column">
               <h4 className="footer-heading">COMPANY</h4>
               <ul>
@@ -58,6 +71,8 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+            
+            {/* Legal information column */}
             <div className="footer-column">
               <h4 className="footer-heading">LEGAL</h4>
               <ul>
@@ -72,6 +87,8 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
+            
+            {/* Social media links column */}
             <div className="footer-column">
               <h4 className="footer-heading">SOCIAL</h4>
               <ul className="footer-list">
@@ -104,6 +121,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Footer bottom with copyright and location */}
         <div className="footer-bottom">
           <p>Copyright © 2025 UzOFin. All rights reserved</p>
           <p>India (EN)</p>

@@ -4,6 +4,7 @@ import MarqueeRow from "../../../components/marquee/marquee";
 
 import "./features.scss";
 
+// Feature items for first marquee row (left direction)
 const itemsOne = [
   {
     id: "unified-dashboard",
@@ -27,6 +28,7 @@ const itemsOne = [
   },
 ];
 
+// Feature items for second marquee row (right direction)
 const itemsTwo = [
   {
     id: "transparent-pricing",
@@ -50,6 +52,7 @@ const itemsTwo = [
   },
 ];
 
+// Feature items for third marquee row (left direction)
 const itemsThree = [
   {
     id: "wai-driven",
@@ -73,14 +76,22 @@ const itemsThree = [
   },
 ];
 
+/**
+ * Features section component that showcases UzOFin's key capabilities
+ * Uses multiple marquee rows with different directions to create dynamic visual effect
+ * Highlights various aspects like AI, security, APIs, and infrastructure
+ * @returns Section with animated feature marquees and introductory content
+ */
 const Features: React.FC = () => {
   return (
     <section className="features-section">
       <Container>
         <div className="title-block">
+          {/* Section heading with brand emphasis */}
           <h2 className="section-title">
             Why <span>UzOFin?</span>
           </h2>
+          {/* Section description (note: content seems to be placeholder) */}
           <p className="section-sub">
             Discover endless creativity with PromptVerse. Generate diverse
             content effortlessly using prompts. Stay updated with real-time
@@ -90,6 +101,7 @@ const Features: React.FC = () => {
           </p>
         </div>
       </Container>
+      {/* Three marquee rows with alternating directions and speeds */}
       <MarqueeRow items={itemsOne} direction="left" speed={12} />
       <MarqueeRow items={itemsTwo} direction="right" speed={10} />
       <MarqueeRow items={itemsThree} direction="left" speed={10} />

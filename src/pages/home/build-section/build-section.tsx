@@ -2,9 +2,9 @@ import React from "react";
 import Button from "../../../components/button/button";
 import Container from "../../../layout/container/container";
 
-import "./build.scss";
+import "./build-section.scss";
 
-const Build: React.FC = () => {
+const BuildSection: React.FC = () => {
   return (
     <section className="build-section">
       <Container>
@@ -27,4 +27,4 @@ const Build: React.FC = () => {
   );
 };
 
-export default Build;
+export default BuildSection;

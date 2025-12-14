@@ -6,6 +6,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/uzofin" element={<Home />} />
 
         {/* READY FOR FUTURE PAGES */}
         {/* <Route path="/pricing" element={<Pricing />} /> */}

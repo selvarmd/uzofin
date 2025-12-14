@@ -1,8 +1,9 @@
 "use client";
-
 import { motion } from "framer-motion";
+
 import "./carousel.scss";
 
+import TaskIcon from "../../assets/icons/task-icon.svg";
 interface CarouselItemProps {
   item: {
     id: string;
@@ -22,10 +23,14 @@ export default function CarouselItem({ item }: CarouselItemProps) {
             {item.title}
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             className="carousel-item-description"
             dangerouslySetInnerHTML={{ __html: item.description }}
           />
+
+          <div className="carousel-icon">
+            <img alt="" src={TaskIcon} />
+          </div>
         </div>
       </div>
     </motion.div>

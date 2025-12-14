@@ -40,7 +40,7 @@
 
 .carousel-item {
   position: relative;
-  height: 14.375rem;
+  height: 16rem;
   border-radius: 1rem;
   overflow: hidden;
   backdrop-filter: blur(4px);
@@ -48,15 +48,21 @@
   background: rgba(255, 255, 255, 0.1);
 
   @media (min-width: 576px) {
-    height: 10.938rem;
+    height: 13rem;
   }
 
   @media (min-width: 992px) {
-    height: 14.375rem;
+    height: 16.5rem;
   }
 
   @media (min-width: 1400px) {
-    height: 23.75rem;
+    height: 27rem;
+  }
+
+  &:hover {
+    .carousel-icon {
+      display: block;
+    }
   }
 }
 
@@ -108,5 +114,34 @@
   @media (min-width: 1400px) {
     font-size: 1.375rem;
     line-height: 1.75rem;
+  }
+
+  a {
+    white-space: nowrap;
+    text-decoration: underline;
+  }
+}
+
+.carousel-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  display: none;
+
+  @media (min-width: 992px) {
+    width: 32px;
+    height: 32px;
+    right: 20px;
+    bottom: 15px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 48px;
+    height: 48px;
+    right: 20px;
+    bottom: 15px;
   }
 }

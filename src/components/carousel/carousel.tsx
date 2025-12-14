@@ -69,7 +69,7 @@ function CarouselCard({
     return 1;
   });
 
-  const opacity = useTransform(rel, (r) => {
+  const opacity = useTransform(rel, () => {
     return 1;
   });
 
